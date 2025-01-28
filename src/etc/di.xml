@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   Copyright (c) 2014-2025 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Block\Adminhtml\Wysiwyg\Images\Content">
+        <plugin name="infrangible_cmsstorage" type="Infrangible\CmsStorage\Plugin\Cms\Block\Adminhtml\Wysiwyg\Images\Content"/>
+    </type>
+    <type name="Magento\Cms\Block\Adminhtml\Wysiwyg\Images\Content\Files">
+        <plugin name="infrangible_cmsstorage" type="Infrangible\CmsStorage\Plugin\Cms\Block\Adminhtml\Wysiwyg\Images\Content\Files"/>
+    </type>
+    <type name="Magento\Cms\Helper\Wysiwyg\Images">
+        <plugin name="infrangible_cmsstorage" type="Infrangible\CmsStorage\Plugin\Cms\Helper\Wysiwyg\Images"/>
+    </type>
+    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
+        <arguments>
+            <argument name="extensions" xsi:type="array">
+                <item name="allowed" xsi:type="array">
+                    <item name="mp4" xsi:type="string">video/mp4</item>
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                    <item name="svg" xsi:type="string">image/svg+xml</item>
+                    <item name="webp" xsi:type="string">image/webp</item>
+                    <item name="zip" xsi:type="string">application/zip</item>
+                </item>
+                <item name="image_allowed" xsi:type="array">
+                    <item name="mp4" xsi:type="string">video/mp4</item>
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                    <item name="svg" xsi:type="string">image/svg+xml</item>
+                    <item name="webp" xsi:type="string">image/webp</item>
+                    <item name="zip" xsi:type="string">application/zip</item>
+                </item>
+                <item name="media_allowed" xsi:type="array">
+                    <item name="mp4" xsi:type="string">video/mp4</item>
+                    <item name="pdf" xsi:type="string">application/pdf</item>
+                    <item name="svg" xsi:type="string">image/svg+xml</item>
+                    <item name="webp" xsi:type="string">image/webp</item>
+                    <item name="zip" xsi:type="string">application/zip</item>
+                </item>
+            </argument>
+        </arguments>
+        <plugin name="infrangible_cmsstorage" type="Infrangible\CmsStorage\Plugin\Cms\Model\Wysiwyg\Images\Storage"/>
+    </type>
+</config>

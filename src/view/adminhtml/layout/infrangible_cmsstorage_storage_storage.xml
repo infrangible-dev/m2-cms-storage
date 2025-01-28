@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+ * @author      Andreas Knollmann
+ * @copyright   Copyright (c) 2014-2025 Softwareentwicklung Andreas Knollmann
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Infrangible\CmsStorage\Block\Adminhtml\Storage" name="infrangible_cmstorage_storage_storage"/>
+        </referenceContainer>
+    </body>
+</page>
