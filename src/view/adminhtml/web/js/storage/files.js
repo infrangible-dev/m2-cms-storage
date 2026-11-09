@@ -11,7 +11,7 @@ define([
 ], function ($) {
     'use strict';
 
-    var globalOptions = {
+    const globalOptions = {
         titles: []
     };
 
@@ -22,10 +22,10 @@ define([
         },
 
         _init: function () {
-            var self = this;
+            const self = this;
 
             $(document).ready(function () {
-                for (var fileId in self.options.titles) {
+                for (const fileId in self.options.titles) {
                     $('div[data-row="file"][id="' + fileId + '"]').attr('title', self.options.titles[fileId]);
                 }
             });
